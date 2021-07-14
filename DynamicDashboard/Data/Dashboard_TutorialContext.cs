@@ -96,8 +96,21 @@ namespace DynamicDashboard.Models
             });
 
             modelBuilder.Entity<Elements>().HasData(
-                new Post { }
-                );
+                new Elements { Id = 1, Name = "Element1" },
+                new Elements { Id = 2, Name = "Element2" },
+                new Elements { Id = 3, Name = "Element3" },
+                new Elements { Id = 4, Name = "Element4" },
+                new Elements { Id = 5, Name = "Element5" });
+
+            modelBuilder.Entity<Templates>().HasData(
+                new Templates { Id = 1, Name = "Template1", ElementsCount = 1 },
+                new Templates { Id = 2, Name = "Template2", ElementsCount = 2 },
+                new Templates { Id = 3, Name = "Template3", ElementsCount = 2 },
+                new Templates { Id = 4, Name = "Template4", ElementsCount = 3 },
+                new Templates { Id = 5, Name = "Template5", ElementsCount = 3 },
+                new Templates { Id = 6, Name = "Template6", ElementsCount = 4 },
+                new Templates { Id = 7, Name = "Template7", ElementsCount = 4 },
+                new Templates { Id = 8, Name = "Template8", ElementsCount = 5 });
 
         }
     }

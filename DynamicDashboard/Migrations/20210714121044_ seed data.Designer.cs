@@ -4,14 +4,16 @@ using DynamicDashboard.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DynamicDashboard.Migrations
 {
     [DbContext(typeof(Dashboard_TutorialContext))]
-    partial class Dashboard_TutorialContextModelSnapshot : ModelSnapshot
+    [Migration("20210714121044_ seed data")]
+    partial class seeddata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
